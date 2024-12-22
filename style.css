@@ -1,0 +1,591 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    border-radius: 1rem;
+}
+
+/* Variables de colores */
+:root {
+    --mi-color-primario: rgb(90, 152, 202);
+    --mi-color-secundario: rgba(121, 9, 109, 0.9528186274509804);
+    --mi-color-terciario: rgba(0, 81, 185, 0.9808298319327731);
+    --mi-color-card: rgba(0, 81, 185, 0.4);
+    --mi-color-border: rgba(245, 245, 245, 0.18);
+    --mi-color-background: rgba(0, 0, 0, 0.620);
+    --mi-color-sahdow: rgba(248, 197, 27, 0.8);
+
+}
+
+body {
+    background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
+    overflow: hidden;
+}
+
+/* --------------------------------------ACA ESTA TODO--------------------------- */
+.contenedorPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95.5vh;
+    margin: 2vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-y: auto;
+    background-color: var(--mi-color-background);
+    border: solid 2px var(--mi-color-border);
+    color: rgba(245, 245, 245, 0.95);
+    box-shadow: -1px 2px 10px 2px rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+
+    /* todos los titulos de la pagina */
+    h2 {
+        font-size: 4.5vh;
+        text-shadow: 5px 5px 10px black;
+        margin: 2vh;
+    }
+
+    /* Letra principal de cada titulo */
+    .letraPrincipal {
+        color: var(--mi-color-primario);
+    }
+
+    /* titulo + subtitulo */
+    .contenedorTitulo {
+        padding: 30vh 0vh 10vh 0vh;
+        width: 100%;
+        text-align: center;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
+
+        /* ajustes para que se vea bien en movil */
+        @media screen and (max-width: 640px) {
+            padding: 10vh 0vh 10vh 0vh;
+        }
+
+        @media screen and (max-width: 1024px) {
+            padding: 15vh 0vh 10vh 0vh;
+        }
+
+        /* Brian Sabatini */
+        h1 {
+            position: relative;
+            justify-content: center;
+            display: flex;
+            flex-wrap: nowrap;
+            word-wrap: break-word;
+            width: 100%;
+            font-size: 6.5vw;
+            text-shadow: -6px 3px 8px black;
+            font-family: "Saira Stencil One", serif;
+            font-weight: 400;
+            font-style: normal;
+            transition: 1s;
+
+            &:hover {
+                font-size: 6.9vw;
+                transition: 0.3s;
+
+            }
+
+            /* ajustes para que se vea bien en smartphone */
+            @media screen and (max-width: 640px) {
+                font-size: 10.5vw;
+            }
+
+            @media screen and (max-width: 1024px) {
+                font-size: 10.5vw;
+            }
+        }
+
+        /* Porfolio */
+        .contenedorSubtitulo {
+            font-size: 3vw;
+            text-shadow: -2px 5px 5px black;
+            position: relative;
+            left: 15.4vw;
+            bottom: 4.2vw;
+            color: var(--mi-color-primario);
+            font-family: "Parisienne", serif;
+            font-weight: 400;
+            font-style: normal;
+            transition: 1s;
+
+            &:hover {
+                text-shadow: -1px 3px 5px var(--mi-color-sahdow);
+                transition: 0.3s;
+                color: var(--mi-color-sahdow);
+            }
+
+            /* ajustes para que se vea bien en smartphone */
+            @media screen and (max-width: 1024px) {
+                font-size: 4.5vw;
+                left: 25.2vw;
+                bottom: 6.5vw;
+            }
+
+        }
+    }
+
+    .contenedorBotones {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: relative;
+        left: 1.5vh;
+
+        .btnRows {
+            display: flex;
+            width: 16vh;
+            margin-top: 1vh;
+            justify-content: space-evenly;
+            position: relative;
+            background-color: rgba(238, 130, 238, 0.3);
+            border: solid 1px var(--mi-color-border);
+            transition: 0.4s;
+
+            &:hover {
+                width: 20vh;
+                transition: 0.3s
+            }
+
+
+
+            /* botones */
+            .btnLink {
+                background-image: url(./iconos/LinkedIn.png);
+                width: 4.5vh;
+                height: 4.5vh;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3.5vh;
+                    height: 3.5vh;
+                }
+            }
+
+            .btnGitHub {
+                background-image: url(./iconos/github.png);
+                width: 4.5vh;
+                height: 4.5vh;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3.5vh;
+                    height: 3.5vh;
+                }
+            }
+
+            .btnTelefono {
+                background-image: url(./iconos/telefono.png);
+                width: 4.5vh;
+                height: 4.5vh;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3vh;
+                    height: 3vh;
+                }
+            }
+
+            .btnGmail {
+                background-image: url(./iconos/mail.png);
+                width: 4.5vh;
+                height: 4.5vh;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+
+                &:hover {
+                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    transition: 0.3s
+                }
+
+                @media screen and (max-width: 640px) {
+                    width: 3vh;
+                    height: 3vh;
+                }
+            }
+        }
+    }
+
+    /* Sobre mi + foto */
+    .contenedorPresentacion {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 2vh;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 1.1rem;
+            max-width: 90vh;
+            height: 35vh;
+            border-radius: 0%;
+            overflow-y: scroll;
+            border-radius: 1%;
+            box-shadow: -11px 10px 10px -7px rgba(0, 0, 0, 0.2);
+
+            @media screen and (max-width: 640px) {
+                height: 30vh;
+                font-size: 0.9rem;
+                word-wrap: break-word;
+                width: 35vh;
+            }
+        }
+
+        .fotoPerfil {
+            width: 40vh;
+            height: 40vh;
+            border-radius: 50%;
+            margin: 2.5vh;
+            mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
+            transition: 0.5s;
+
+            @media screen and (max-width: 640px) {
+                width: 30vh;
+                height: 30vh;
+            }
+
+            &:hover {
+                mask-image: none;
+                box-shadow: 0px 0px 10px 0px var(--mi-color-sahdow);
+                width: 40.1vh;
+                height: 40.1vh;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    /* Proyectos */
+    .contenedorPorfolio {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2vh;
+        justify-content: space-evenly;
+        margin: 2vh;
+
+        .proyecto {
+            display: flex;
+            flex-direction: column;
+            width: 12rem;
+            height: 15rem;
+            align-items: center;
+            margin: 1.2vh;
+            border: solid 1px var(--mi-color-border);
+            box-shadow: -6px 1px 10px 1px rgba(0, 0, 0, 0.8);
+            transition: all 0.6s;
+            background-color: var(--mi-color-card);
+
+            &:hover {
+                box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                width: 12.5rem;
+                background: rgba(0, 0, 0, 0.8);
+
+                img {
+                    margin-top: 5rem;
+                    transition: all 0.3s;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                width: 12rem;
+                height: 6.2rem;
+                mask-image: linear-gradient(rgb(0, 0, 0) 63%, transparent);
+                z-index: 2;
+            }
+
+            h3 {
+                position: relative;
+                bottom: 1vh;
+                font-size: 1.5rem;
+                color: aliceblue;
+                text-shadow: 0px 0px 4px var(--mi-color-primario);
+                background-color: rgba(0, 0, 0, 0.4);
+                box-shadow: 0px 0px 8px 10px rgb(0, 0, 0, 0.3);
+                border-radius: 100%;
+            }
+
+            p {
+                font-size: 0.9rem;
+                text-align: center;
+                margin: 1vh;
+
+            }
+
+            .linksCard {
+                display: flex;
+                align-items: center;
+                position: relative;
+                top: 2.5rem;
+                right: 3.5rem;
+
+                .linkApp {
+                    background-image: url(./iconos/pantalla-completa.png);
+                    background-size: cover;
+                    width: 1rem;
+                    height: 1rem;
+                    padding: 1rem;
+                    margin-left: 0.5rem;
+                    position: absolute;
+                    left: 3.5rem;
+                    transition: all 0.25s;
+                    background-color: rgba(0, 128, 0, 0.3);
+
+                    &:hover {
+                        background-color: rgba(0, 128, 0, 1);
+                        box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    }
+
+                }
+
+                .linkRepo {
+                    background-image: url(./iconos/codigo.png);
+                    background-size: cover;
+                    width: 1rem;
+                    height: 1rem;
+                    padding: 1rem;
+                    border-radius: 100%;
+                    position: absolute;
+                    transition: all 0.25s;
+
+                    background-color: rgba(255, 0, 0, 0.3);
+
+                    &:hover {
+                        background-color: rgba(255, 0, 0, 0.6);
+                        box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                    }
+
+                }
+            }
+
+            .skills {
+                display: flex;
+                margin-top: auto;
+                background-color: var(--mi-color-background);
+                align-items: center;
+                border: solid 1px var(--mi-color-border);
+                margin-bottom: 1vh;
+
+
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin: 0.5vh;
+                    justify-content: space-around;
+                }
+            }
+
+            /* este hover es para q resalte los links de la card */
+            &:hover {
+                h3 {
+                    color: transparent;
+                }
+
+                p {
+                    color: transparent;
+                }
+
+                .skills img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* foto de skills con barra color */
+    .contenedorSkills {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5rem 0rem 10rem 0rem;
+        max-width: 100%;
+        width: 65rem;
+        height: 0.15rem;
+        background-image: linear-gradient(to left, transparent 0%, rgba(0, 178, 233, 0.8) 2%, rgb(206, 11, 11, 0.8) 98%, transparent 100%);
+        border-top: 1px solid var(--mi-color-border);
+        border-bottom: 1px solid var(--mi-color-border);
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                max-width: 5vh;
+                max-height: 5vh;
+                position: absolute;
+                border-radius: 100%;
+                transition: 0.4s;
+                margin: 10rem;
+
+                &:hover {
+                    max-width: 6.5vh;
+                    max-height: 6.5vh;
+                    transition: 0.3s;
+                }
+
+
+                @media screen and (max-width: 640px) {
+                    max-width: 3vh;
+                    max-height: 3vh;
+                }
+            }
+
+            p {
+                position: relative;
+                top: 3.8vh;
+                font-size: 0.8rem;
+
+                @media screen and (max-width: 640px) {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+    }
+
+    /* formulario + texto */
+    footer {
+        text-align: center;
+        background-color: var(--mi-color-background);
+        width: 100%;
+        mask: linear-gradient(transparent, rgb(0, 0, 0) 20%);
+
+        h2 {
+            margin-top: 16vh;
+        }
+
+        .contenedorFormulario {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 4vh;
+
+            .contenedorFormularioTexto {
+                width: 65vh;
+                margin: 10vh;
+
+                .letraPrincipal {
+                    margin: 2vh 1vh 0, 2vh 2vh;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    font-family: "Saira Stencil One", serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: rgba(255, 255, 255, 0.918);
+                }
+
+                .gracias {
+                    margin: 2vh;
+                    font-size: 1rem;
+                    text-align: center;
+                    font-family: "Saira Stencil One", serif;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+
+            form {
+                width: 55vh;
+                display: flex;
+
+                ul {
+                    margin: 0.5vh;
+                    width: 85vw;
+                    display: flex;
+                    flex-direction: column;
+                    list-style-type: none;
+                    text-align: start;
+                    font-family: "Saira Stencil One", serif;
+                    font-weight: 400;
+                    font-style: normal;
+
+                    @media screen and (max-width: 640px) {
+                        margin-bottom: 20vh;
+                    }
+
+                    input {
+                        width: 90%;
+                        min-width: 20vw;
+                        background-color: var(--mi-color-background);
+                        color: aliceblue;
+                        padding: 0.4vh;
+                        margin: 0.2vh;
+
+                    }
+
+                    .mensajeForm {
+                        height: 12vh;
+                        background-color: rgba(0, 0, 0, 0.9);
+
+                    }
+
+                    button {
+                        margin: 0.9vh;
+                        border-radius: 100%;
+                        width: 4.5vh;
+                        height: 4.5vh;
+                        background-color: var(--mi-color-card);
+                        font-family: "Saira Stencil One", serif;
+                        font-size: 1.1vh;
+                        color: rgba(245, 245, 245, 0.9);
+
+                        &:hover {
+                            box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
+                            transition: 0.3s
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+/* --------------------------------------ACA ESTA TODO--------------------------- */
+
+
+
+
+
+
+
+/* Ocultar scroll bar de los parrafos */
+p::-webkit-scrollbar {
+    display: none;
+}
+
+.contenedorPrincipal::-webkit-scrollbar {
+    display: none;
+}
