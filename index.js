@@ -1,13 +1,13 @@
 //guardo las rutas de las imagenes en una variable.
-let skillHtml = "./iconos/html-5.png";
-let skillCss = "./iconos/css.png";
-let skillJavaScript = "./iconos/js.png";
-let skillSass = "./iconos/sass.png";
-let skillReact = "./iconos/react.png";
-let skillBootstrap = "./iconos/Bootstrap.png";
-let skillChackra = "./iconos/chakraUI.png";
-let skillFirebase = "./iconos/firesbase.png";
-let skillGitHub = "./iconos/github.png";
+let skillHtml = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/html-5.png?raw=true";
+let skillCss = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/css.png?raw=true";
+let skillJavaScript = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/js.png?raw=true";
+let skillSass = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/Sass.png?raw=true";
+let skillReact = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/React.png?raw=true";
+let skillBootstrap = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/Bootstrap.png?raw=true";
+let skillChackra = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/chakraUI.png?raw=true";
+let skillFirebase = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/firesbase.png?raw=true";
+let skillGitHub = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/github.png?raw=true";
 let skillnone = null;
 
 //construtor porfolio.
@@ -40,7 +40,7 @@ let proyectos = [
   new Porfolio(
     "8-Bits",
     "App react destinada a guardar Roms y emuladores de video juegos",
-    "./images/8bits.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/8bits.jpg?raw=true",
     "https://github.com/N3u7r0/8beats-reactJS",
     "https://8bitsroms.web.app/",
     skillReact,
@@ -51,7 +51,7 @@ let proyectos = [
   new Porfolio(
     "Guitar-on",
     "E- comerce de react de instuementos musicales",
-    "./images/Guitar-on.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/Guitar-on.jpg?raw=true",
     "https://github.com/N3u7r0/guitarOn",
     "https://guitaron-95a31.web.app/",
     skillReact,
@@ -62,7 +62,7 @@ let proyectos = [
   new Porfolio(
     "checkIn Js",
     "app de javascript vanila",
-    "./images/checkin-js.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/checkIn-Js.jpg?raw=true",
     "https://github.com/N3u7r0/MarketJs",
     "link 1",
     skillHtml,
@@ -73,7 +73,7 @@ let proyectos = [
   new Porfolio(
     "calculadora",
     "Simple calculadora de javascript",
-    "./images/calculadora.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/calculadora.jpg?raw=true",
     "https://github.com/N3u7r0/calculadora",
     "https://n3u7r0.github.io/calculadora/",
     skillHtml,
@@ -84,7 +84,7 @@ let proyectos = [
   new Porfolio(
     "Curriculum Vitae",
     "mi curriculum vitae echo con estilos propios",
-    "./images/cv.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/cv.jpg?raw=true",
     "https://github.com/N3u7r0/CurriculumVitae",
     "https://n3u7r0.github.io/CurriculumVitae",
     skillHtml,
@@ -95,7 +95,7 @@ let proyectos = [
   new Porfolio(
     "Repositorio",
     "Este portfolio echo con estilos propios, entra al repo para ver su estructura!",
-    "./images/Porfolio.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/Porfolio.jpg?raw=true",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio",
     "https://n3u7r0.github.io/Brian-Sabatini--Repositorio/",
     skillHtml,
@@ -209,3 +209,5 @@ let hiddenInput = document.getElementById("hiddenInput");
 
 // Establecer su valor al URL actual
 hiddenInput.value = window.location.href;
+
+console.info("URL actual:", hiddenInput.value);
