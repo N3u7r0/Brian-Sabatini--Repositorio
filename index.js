@@ -1,13 +1,22 @@
 //guardo las rutas de las imagenes en una variable.
-let skillHtml = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/html-5.png?raw=true";
-let skillCss = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/css.png?raw=true";
-let skillJavaScript = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/js.png?raw=true";
-let skillSass = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/Sass.png?raw=true";
-let skillReact = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/React.png?raw=true";
-let skillBootstrap = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/Bootstrap.png?raw=true";
-let skillChackra = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/chakraUI.png?raw=true";
-let skillFirebase = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/firesbase.png?raw=true";
-let skillGitHub = "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/github.png?raw=true";
+let skillHtml =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/html-5.png?raw=true";
+let skillCss =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/css.png?raw=true";
+let skillJavaScript =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/js.png?raw=true";
+let skillSass =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/Sass.png?raw=true";
+let skillReact =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/React.png?raw=true";
+let skillBootstrap =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/Bootstrap.png?raw=true";
+let skillChackra =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/chakraUI.png?raw=true";
+let skillFirebase =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/firesbase.png?raw=true";
+let skillGitHub =
+  "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/iconos/github.png?raw=true";
 let skillnone = null;
 
 //construtor porfolio.
@@ -183,26 +192,29 @@ conjuntoSkills.map((skill) => {
 });
 
 //llamar al telefono celular.
-document.getElementsByClassName("btnTelefono").addEventListener("click", function () {
-  const numeroCelular = "+541125315506"; // constante que guarda el telefono para el btn.
-  // Copiar el número al portapapeles
-  navigator.clipboard
-    .writeText(numeroCelular)
-    .then(() => {
-      console.log("Número copiado al portapapeles:", numeroCelular);
+document
+  .getElementsByClassName("btnTelefono")
+  .addEventListener("click", function () {
+    const numeroCelular = "+541125315506"; // constante que guarda el telefono para el btn.
+    // Copiar el número al portapapeles
+    navigator.clipboard
+      .writeText(numeroCelular)
+      .then(() => {
+        console.log("Número copiado al portapapeles:", numeroCelular);
 
-      // Llamar al número usando el esquema tel
-      window.location.href = `tel:${numeroCelular}`;
-    })
-    .catch((err) => {
-      console.error("Error al copiar el número:", err);
-    });
-});
+        // Llamar al número usando el esquema tel
+        window.location.href = `tel:${numeroCelular}`;
+      })
+      .catch((err) => {
+        console.error("Error al copiar el número:", err);
+      });
+  });
 // ir al formulario
-document.getElementsByClassID("btnMailID").addEventListener("click", function () {
-  window.scrollTo({ buttom: document.body.scrollHeight, behavior: "smooth" });
-});
-
+document
+  .getElementsByClassID("btnMailID")
+  .addEventListener("click", function () {
+    window.scrollTo({ buttom: document.body.scrollHeight, behavior: "smooth" });
+  });
 
 // Obtener el elemento input oculto
 let hiddenInput = document.getElementById("hiddenInput");
