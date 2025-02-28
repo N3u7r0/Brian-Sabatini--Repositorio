@@ -31,6 +31,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
 
 }
 
@@ -39,8 +41,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 92vh;
-    margin: 2vh;
+    height: 90vh;
+    margin: 5vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--mi-color-background);
     border: solid 2px var(--mi-color-border);
@@ -48,7 +50,8 @@ body {
     box-shadow: -1px 2px 10px 2px rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-
+    position: relative;
+    z-index: 10;
     /* todos los titulos de la pagina */
     h2 {
         font-size: 2.2rem;
