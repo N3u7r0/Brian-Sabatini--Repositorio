@@ -18,7 +18,10 @@
 
 body {
     background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
-    padding-bottom: 2.6vh;
+    overflow: hidden;
+    padding-bottom: 6rem;
+    
+    
 }
 
 /* --------------------------------------ACA ESTA TODO--------------------------- */
@@ -26,8 +29,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 95vh;
-    margin: 1vh;
+    height: 92vh;
+    margin: 2vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--mi-color-background);
     border: solid 2px var(--mi-color-border);
