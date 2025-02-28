@@ -24,7 +24,8 @@
 body {
     background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
     overflow: hidden;
-    padding-bottom: 6rem; /* esto es para q no se vea la repeticion del gradiante*/
+  
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* --------------------------------------ACA ESTA TODO--------------------------- */
@@ -40,8 +41,9 @@ body {
     color: rgba(245, 245, 245, 0.95);
     box-shadow: -1px 2px 10px 2px rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
-    padding-bottom: env(safe-area-inset-bottom);
+    
 
+    padding-bottom: env(safe-area-inset-bottom);
 
 
     /* todos los titulos de la pagina */
