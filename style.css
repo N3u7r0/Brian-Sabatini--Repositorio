@@ -1,8 +1,13 @@
 * {
     margin: 0%;
     padding: 0%;
-    border-radius: 1rem;
+    border-radius: 1rem; 
 }
+@viewport {
+    viewport-fit: cover;
+}
+
+
 
 /* Variables de colores */
 :root {
@@ -19,9 +24,7 @@
 body {
     background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
     overflow: hidden;
-    padding-bottom: 6rem;
-    
-    
+    padding-bottom: 6rem; /* esto es para q no se vea la repeticion del gradiante*/
 }
 
 /* --------------------------------------ACA ESTA TODO--------------------------- */
@@ -29,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 55rem;
+    height: 95vh;
     margin: 2vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--mi-color-background);
