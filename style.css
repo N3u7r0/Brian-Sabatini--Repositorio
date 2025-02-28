@@ -27,9 +27,9 @@ body {
 
     background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
     overflow: hidden;
-    padding-bottom: 5rem;
-   
-    
+    padding-bottom: 10rem; /* esto es para q no se corte el gradiante abajo */
+
+
 
 }
 
@@ -46,7 +46,10 @@ body {
     overflow-x: hidden;
     height: 92vh;
     margin: 2vh;
-   
+    @media screen and (max-width: 430px) {
+        height: 87vh;
+        
+    }
 
     /* todos los titulos de la pagina */
     h2 {
