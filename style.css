@@ -25,7 +25,7 @@ body {
     background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
     overflow: hidden;
   
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom2,2vh);
 }
 
 /* --------------------------------------ACA ESTA TODO--------------------------- */
@@ -43,7 +43,7 @@ body {
     overflow-x: hidden;
     
 
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom,2vh);
 
 
     /* todos los titulos de la pagina */
