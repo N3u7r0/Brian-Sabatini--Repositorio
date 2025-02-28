@@ -8,8 +8,6 @@
     viewport-fit: cover;
 }
 
-
-
 /* Variables de colores */
 :root {
     --mi-color-primario: rgb(90, 152, 202);
@@ -19,18 +17,13 @@
     --mi-color-border: rgba(245, 245, 245, 0.18);
     --mi-color-background: rgba(0, 0, 0, 0.620);
     --mi-color-sahdow: rgba(248, 197, 27, 0.85);
-
 }
 
 body {
-    /* ajustes para que se vea bien en movil */
-
     background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, var(--mi-color-secundario) 50%, var(--mi-color-terciario) 100%);
     overflow: hidden;
-    padding-bottom: 10rem; /* esto es para q no se corte el gradiante abajo */
-
-
-
+    padding-bottom: 10rem;
+    /* esto es para q no se corte el gradiante abajo */
 }
 
 /* --------------------------------------ACA ESTA TODO--------------------------- */
@@ -46,16 +39,18 @@ body {
     overflow-x: hidden;
     height: 92vh;
     margin: 2vh;
+
     @media screen and (max-width: 430px) {
+        /* achica el largo para que no se choque con los botones del smartphone */
         height: 87vh;
-        
     }
 
     /* todos los titulos de la pagina */
     h2 {
-        font-size: 2.2rem;
+        font-size: 3.2em;
         text-shadow: 5px 5px 10px black;
         margin: 2vh;
+        text-align: center;
     }
 
     /* Letra principal de cada titulo */
@@ -65,43 +60,38 @@ body {
 
     /* titulo + subtitulo */
     .contenedorTitulo {
-        padding: 30vh 0vh 10vh 0vh;
+        padding: 30vh 0vw 10vh 0vw;
         width: 100%;
         text-align: center;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, transparent);
 
         /* ajustes para que se vea bien en movil */
         @media screen and (max-width: 640px) {
-            padding: 10vh 0vh 10vh 0vh;
-        }
-
-        @media screen and (max-width: 1024px) {
-            padding: 15vh 0vh 10vh 0vh;
+            padding: 10vh 0vw 10vh 0vw;
         }
 
         /* Brian Sabatini */
         h1 {
+            font-family: "Saira Stencil One", serif;
+            font-weight: 400;
             position: relative;
-            justify-content: center;
             display: flex;
             flex-wrap: nowrap;
-            word-wrap: break-word;
+            justify-content: center;
             width: 100%;
             font-size: 6.5vw;
             text-shadow: -6px 3px 8px black;
-            font-family: "Saira Stencil One", serif;
-            font-weight: 400;
             font-style: normal;
             transition: 1s;
 
             &:hover {
-                font-size: 6.9vw;
+                transform: scale(1.05);
                 transition: 0.3s;
-
             }
 
             /* ajustes para que se vea bien en smartphone */
-            @media screen and (max-width: 640px) {
+
+            @media screen and (max-width: 1600px) {
                 font-size: 10.5vw;
             }
 
@@ -110,7 +100,7 @@ body {
             }
         }
 
-        /* Porfolio */
+
         .contenedorSubtitulo {
             font-size: 3vw;
             text-shadow: -2px 5px 5px black;
@@ -130,45 +120,45 @@ body {
             }
 
             /* ajustes para que se vea bien en smartphone */
-            @media screen and (max-width: 1024px) {
-                font-size: 4.5vw;
-                left: 25.2vw;
-                bottom: 6.5vw;
+            @media screen and (max-width: 1600px) {
+                font-size: 5.5vw;
+                left: 23.7vw;
+                bottom: 6.7vw;
             }
-
         }
     }
 
     .contenedorBotones {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
+        display: grid;
         position: relative;
-        left: 1.5vh;
+        justify-content: left;
 
         .btnRows {
             display: flex;
-            width: 16vh;
-            margin-top: 1vh;
             justify-content: space-evenly;
-            position: relative;
+            width: 12rem;
+            margin-top: 1rem;
+            padding-left: 3rem;
             background-color: rgba(238, 130, 238, 0.3);
             border: solid 1px var(--mi-color-border);
             transition: 0.4s;
+            /* esto es para q no se note el borde redonde q esta pegado a la pared del contenedor */
+            position: relative;
+            right: 1.5rem;
 
             &:hover {
-                width: 20vh;
+                width: 15rem;
                 transition: 0.3s
             }
 
-
-
             /* botones */
-            .btnLink {
-                background-image: url(./iconos/LinkedIn.png);
-                width: 4.5vh;
-                height: 4.5vh;
+            .btnLink,
+            .btnGitHub,
+            .btnTelefono,
+            .btnMail {
+                width: 3.5em;
+                height: 3.5em;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -180,69 +170,25 @@ body {
                 }
 
                 @media screen and (max-width: 640px) {
-                    width: 3.5vh;
-                    height: 3.5vh;
+                    width: 3em;
+                    height: 3em;
                 }
+            }
+
+            .btnLink {
+                background-image: url(./iconos/LinkedIn.png);
             }
 
             .btnGitHub {
                 background-image: url(./iconos/github.png);
-                width: 4.5vh;
-                height: 4.5vh;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 100%;
-
-                &:hover {
-                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
-                    transition: 0.3s
-                }
-
-                @media screen and (max-width: 640px) {
-                    width: 3.5vh;
-                    height: 3.5vh;
-                }
             }
 
             .btnTelefono {
                 background-image: url(./iconos/telefono.png);
-                width: 4.5vh;
-                height: 4.5vh;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 100%;
-
-                &:hover {
-                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
-                    transition: 0.3s
-                }
-
-                @media screen and (max-width: 640px) {
-                    width: 3vh;
-                    height: 3vh;
-                }
             }
 
             .btnMail {
                 background-image: url(./iconos/mail.png);
-                width: 4.5vh;
-                height: 4.5vh;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 100%;
-
-                &:hover {
-                    box-shadow: 0px 0px 7px 0px var(--mi-color-sahdow);
-                    transition: 0.3s
-                }
-
-                @media screen and (max-width: 640px) {
-                    width: 3vh;
-                    height: 3vh;
-                }
             }
         }
     }
@@ -250,33 +196,36 @@ body {
     /* Sobre mi + foto */
     .contenedorPresentacion {
         display: flex;
-        flex-wrap: wrap;
-        width: auto;
-        margin: 2vh;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 90%;
+        margin: 2rem;
         justify-content: center;
         align-items: center;
 
+        @media screen and (max-width: 1400px) {
+            flex-direction: column;
+        }
+
         p {
-            font-size: 1.1rem;
-            max-width: 45rem;
+            font-size: 1.4rem;
+            width: 45%;
             height: 35vh;
             border-radius: 0%;
             overflow-y: scroll;
             border-radius: 1%;
             box-shadow: -11px 10px 20px -7px rgba(0, 0, 0, 0.2);
 
-            @media screen and (max-width: 640px) {
-                height: 30vh;
-                font-size: 0.9rem;
-                word-wrap: break-word;
-                width: 35vh;
+            @media screen and (max-width: 1400px) {
+                width: 100%;
             }
+
         }
 
         .fotoPerfil {
             width: 40vh;
             height: 40vh;
-            border-radius: 50%;
+            border-radius: 500%;
             margin: 2.5vh;
             mask-image: linear-gradient(rgb(0, 0, 0) 80%, transparent);
             transition: 0.5s;
