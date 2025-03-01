@@ -219,7 +219,8 @@ body {
         }
 
         p {
-            font-size: larger;
+            font-weight:500;
+            font-size: medium;
             width: 45%;
             height: 35vh;
             border-radius: 0%;
@@ -359,7 +360,6 @@ body {
                     }
                 }
 
-
             }
 
             /* este hover es para q resalte los links de la card */
@@ -450,7 +450,7 @@ body {
                 position: relative;
                 top: 7.8vh;
                 font-size:medium;
-
+                font-weight:800;
                 @media screen and (max-width: 640px) {
                     font-size: 0.5rem;
                 }
@@ -468,7 +468,7 @@ body {
                 transition: opacity 0.3s, transform 0.3s;
 
                 .liSkillsHover {
-                    font-size:smaller;
+                    font-size: smaller;
                 }
             }
         }
