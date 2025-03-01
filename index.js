@@ -118,7 +118,7 @@ let proyectos = [
 proyectos.map((proyecto) => {
   document.getElementsByClassName("contenedorPorfolio")[0].innerHTML += `
 
-  <div class="proyecto">
+  <div class="porfolioCard">
   <div class="linksCard">
         <a class="linkApp" href="${proyecto.linkApp}">
         </a>
