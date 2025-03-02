@@ -38,7 +38,7 @@ body {
     color: rgba(245, 245, 245, 0.95);
     box-shadow: -1px 2px 10px 2px rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
-    height: 92vh;
+    height: 95vh;
     margin: 2vh;
 
     @media screen and (max-width: 430px) {
@@ -219,7 +219,7 @@ body {
         }
 
         p {
-            font-weight:500;
+            font-weight: 500;
             font-size: medium;
             width: 45%;
             height: 35vh;
@@ -449,10 +449,11 @@ body {
             p {
                 position: relative;
                 top: 7.8vh;
-                font-size:medium;
-                font-weight:800;
+                font-size: medium;
+                font-weight: 800;
+
                 @media screen and (max-width: 640px) {
-                    font-size: 0.5rem;
+                    font-size: x-small;
                 }
             }
 
@@ -469,6 +470,7 @@ body {
 
                 .liSkillsHover {
                     font-size: smaller;
+                    font-weight: 800;
                 }
             }
         }
@@ -533,7 +535,7 @@ body {
                     font-style: normal;
 
                     @media screen and (max-width: 640px) {
-                        margin-bottom: 20vh;
+                        padding-bottom: 5vh;
                     }
 
                     input {
@@ -575,15 +577,7 @@ body {
     }
 }
 
-/* --------------------------------------ACA ESTA TODO--------------------------- */
-
-
-
-
-
-
-
-/* Ocultar scroll bar de los parrafos */
+/* Ocultar scroll bar de los parrafos y el contenedor principal */
 p::-webkit-scrollbar {
     display: none;
 }

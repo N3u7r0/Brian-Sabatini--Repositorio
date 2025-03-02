@@ -115,87 +115,62 @@ let proyectos = [
 ];
 
 //imprimo los porfolios con un .map
-proyectos.map((proyecto) => {
-  document.getElementsByClassName("contenedorPorfolio")[0].innerHTML += `
-
-  <div class="porfolioCard">
-  <div class="linksCard">
-        <a class="linkApp" href="${proyecto.linkApp}">
-        </a>
-        <a  class="linkRepo" href="${proyecto.linkRepo}">
-        </a>
-  </div>
-      <img  src="${proyecto.imagen}" alt="${proyecto.titulo}">
-      <h3>${proyecto.titulo}</h3>
-      <p>${proyecto.descripcion}</p>
-
-      <div class="skills">
-        ${
-          proyecto.skillA
-            ? `<img src="${proyecto.skillA}" alt="Skill ICONO ">`
-            : `<span></span>`
-        }
-        ${
-          proyecto.skillB
-            ? `<img src="${proyecto.skillB}" alt="Skill ICONO ">`
-            : `<span></span>`
-        }
-        ${
-          proyecto.skillC
-            ? `<img src="${proyecto.skillC}" alt="Skill ICONO ">`
-            : `<span></span>`
-        }
-        ${
-          proyecto.skillD
-            ? `<img src="${proyecto.skillD}" alt="Skill ICONO ">`
-            : `<span></span>`
-        }
-      </div>
-       
-  </div>
-  `;
-});
-
-//constructor skills.
 class Skills {
-  constructor(titulo, imagen) {
+  constructor(titulo, imagen, habilidades) {
     this.titulo = titulo;
     this.imagen = imagen;
+    this.habilidades = habilidades; // Array con habilidades específicas
   }
 }
 
 let conjuntoSkills = [
-  new Skills("Html-5", skillHtml),
-  new Skills("Css", skillCss),
-  new Skills("JavaScript", skillJavaScript),
-  new Skills("Sass", skillSass),
-  new Skills("React js", skillReact),
-  new Skills("Bootstrap", skillBootstrap),
-  new Skills("ChakraUI", skillChackra),
-  new Skills("Firebase", skillFirebase),
-  new Skills("Github", skillGitHub),
+  new Skills("Html-5", skillHtml, ["Etiquetas", "Semántica", "Accesibilidad"]),
+  new Skills("Css", skillCss, ["Flexbox", "Grid", "Animaciones"]),
+  new Skills("JavaScript", skillJavaScript, ["ES6+", "DOM", "Promesas"]),
+  new Skills("Sass", skillSass, ["Variables", "Mixins", "Anidamiento"]),
+  new Skills("React js", skillReact, ["Componentes", "Hooks", "Estado"]),
+  new Skills("Bootstrap", skillBootstrap, [
+    "Grid",
+    "Utilidades",
+    "Componentes",
+  ]),
+  new Skills("ChakraUI", skillChackra, [
+    "Tematización",
+    "Componentes",
+    "Accesibilidad",
+  ]),
+  new Skills("Firebase", skillFirebase, [
+    "Autenticación",
+    "Base de datos",
+    "Hosting",
+  ]),
+  new Skills("Github", skillGitHub, ["Repositorios", "Colaboración", "CI/CD"]),
 ];
 
 conjuntoSkills.map((skill) => {
+  let habilidadesHTML = skill.habilidades
+    .map((habilidad) => `<li class="liSkillsHover">${habilidad}</li>`)
+    .join(""); // Genera los <li> para cada habilidad del skills
+
   document.getElementsByClassName("contenedorSkills")[0].innerHTML += `
-  <li>
-    <img src="${skill.imagen}" alt="${skill.titulo} ">
-    <ul class="ulSkillsHover" >
-      <li class="liSkillsHover">asdad</li>
-      <li class="liSkillsHover">tester</li>
-      <li class="liSkillsHover">lorem</li>
-      <li class="liSkillsHover">esas</li>
-    </ul>
-     <p>${skill.titulo}</p>
-  </li>
+    <li>
+      <img src="${skill.imagen}" alt="${skill.titulo}">
+      <ul class="ulSkillsHover">
+        ${habilidadesHTML} <!-- inprime las habilidades dinamicamente -->
+      </ul>
+      <p>${skill.titulo}</p>
+    </li>
   `;
 });
 
-//llamar al telefono celular.
-document
-  .getElementsByClassName("btnTelefono")
-  .addEventListener("click", function () {
+// Seleccionar todos los elementos con la clase "btnTelefono"
+let botonesTelefono = document.getElementsByClassName("btnTelefono");
+
+// Iterar sobre cada botón y agregar un event listener
+Array.from(botonesTelefono).forEach((btn) => {
+  btn.addEventListener("click", function () {
     const numeroCelular = "+541125315506"; // constante que guarda el telefono para el btn.
+    
     // Copiar el número al portapapeles
     navigator.clipboard
       .writeText(numeroCelular)
@@ -209,17 +184,30 @@ document
         console.error("Error al copiar el número:", err);
       });
   });
-// ir al formulario
+});
+
+// Ir al formulario (scroll hasta el final del contenedor con clase "contenedorPrincipal") (fgentileza de copilot)
 document
-  .getElementsByClassID("btnMailID")
+  .getElementById("btnMailID")
   .addEventListener("click", function () {
-    window.scrollTo({ buttom: document.body.scrollHeight, behavior: "smooth" });
+    let contenedor = document.querySelector(".contenedorPrincipal"); // Seleccionar el contenedor con la clase "contenedorPrincipal"
+    if (contenedor) {
+      contenedor.scrollTo({ 
+        top: contenedor.scrollHeight, // Altura total del contenedor
+        behavior: "smooth" // Desplazamiento suave
+      });
+    } else {
+      console.error("El contenedor con la clase 'contenedorPrincipal' no existe.");
+    }
   });
 
 // Obtener el elemento input oculto
 let hiddenInput = document.getElementById("hiddenInput");
 
 // Establecer su valor al URL actual
-hiddenInput.value = window.location.href;
-
-console.info("URL actual:", hiddenInput.value);
+if (hiddenInput) {
+  hiddenInput.value = window.location.href;
+  console.info("URL actual:", hiddenInput.value);
+} else {
+  console.error("El elemento con ID 'hiddenInput' no existe.");
+}
