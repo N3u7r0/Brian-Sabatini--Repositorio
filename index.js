@@ -48,7 +48,7 @@ class Porfolio {
 let proyectos = [
   new Porfolio(
     "8-Bits",
-    "App react destinada a guardar Roms y emuladores de video juegos",
+    "App destinada a guardar o eliminar Roms y emuladores de consolas retro.estilos css propios ",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/8bits.jpg?raw=true",
     "https://github.com/N3u7r0/8beats-reactJS",
     "https://8bitsroms.web.app/",
@@ -59,18 +59,19 @@ let proyectos = [
   ),
   new Porfolio(
     "Guitar-on",
-    "E- comerce de react de instuementos musicales",
+    "E-comerce de react de instuementos musicales con un carrito de compras.",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/Guitar-on.jpg?raw=true",
     "https://github.com/N3u7r0/guitarOn",
     "https://guitaron-95a31.web.app/",
     skillReact,
     skillChackra,
     skillJavaScript,
-    skillnone
+   
+    skillFirebase
   ),
   new Porfolio(
     "checkIn Js",
-    "app de javascript vanila",
+    "app de javascript vanila para guardar datos en el local storage.",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/checkIn-Js.jpg?raw=true",
     "https://github.com/N3u7r0/MarketJs",
     "link 1",
@@ -81,7 +82,7 @@ let proyectos = [
   ),
   new Porfolio(
     "calculadora",
-    "Simple calculadora de javascript",
+    "una simple calculadora de javascript",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/calculadora.jpg?raw=true",
     "https://github.com/N3u7r0/calculadora",
     "https://n3u7r0.github.io/calculadora/",
@@ -103,7 +104,7 @@ let proyectos = [
   ),
   new Porfolio(
     "Repositorio",
-    "Este portfolio echo con estilos propios, entra al repo para ver su estructura!",
+    "Portfolio con estilos propios, entra al repo para ver su estructura!",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/Porfolio.jpg?raw=true",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio",
     "https://n3u7r0.github.io/Brian-Sabatini--Repositorio/",
@@ -169,7 +170,7 @@ let conjuntoSkills = [
   new Skills("Css", skillCss, ["Flexbox", "Grid", "Animaciones"," responsive"]),
   new Skills("JavaScript", skillJavaScript, ["ES6+", "DOM", "Promesas"]),
   new Skills("Sass", skillSass, ["Variables", "Mixins", "Anidamiento"]),
-  new Skills("React js", skillReact, ["Componentes", "Hooks", "Estados"]),
+  new Skills("React js", skillReact, ["Componentes", "Hooks", "Estados, customHooks"]),
   new Skills("Bootstrap", skillBootstrap, [
     "Grid",
     "Utilidades",
@@ -181,7 +182,7 @@ let conjuntoSkills = [
     "Accesibilidad",
   ]),
   new Skills("Firebase", skillFirebase, ["dataBase", "storage", "Hosting"]),
-  new Skills("Github", skillGitHub, ["Repositorios", "Colaboración", "CI/CD"]),
+  new Skills("Github", skillGitHub, ["Repositorios", "github-pages"]),
 ];
 
 conjuntoSkills.map((skill) => {
