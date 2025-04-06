@@ -424,7 +424,12 @@ body {
                     font-size: smaller;
                     font-weight: 800;
                     border-radius: 0%;
+                    
 
+                    @media screen and (max-width: 640px) {
+                        font-size:x-small;
+                }
+                    
                 }
             }
         }
