@@ -117,7 +117,7 @@ let proyectos = [
     new Porfolio(
     "ToDo-List",
     "Un todo list full responsive que guarda las tareas en el storage. ",
-    "../images/to-DoList.jpg",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/to-DoList.jpg?raw=true",
     "https://github.com/N3u7r0/8beats-reactJS",
     "https://todolist-brian.web.app/",
     skillHtml,
