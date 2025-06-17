@@ -46,6 +46,7 @@ class Porfolio {
 
 //creo un array de objetos para recorre los porfolios.
 let proyectos = [
+
   new Porfolio(
     "8-Bits",
     "App destinada a guardar o eliminar Roms y emuladores de consolas retro.estilos css propios ",
@@ -66,7 +67,7 @@ let proyectos = [
     skillReact,
     skillChackra,
     skillJavaScript,
-   
+
     skillFirebase
   ),
   new Porfolio(
@@ -112,6 +113,16 @@ let proyectos = [
     skillCss,
     skillJavaScript,
     skillnone
+  ),
+    new Porfolio(
+    "ToDo-List",
+    "Un todo list full responsive que guarda las tareas en el storage. ",
+    "../images/to-DoList.jpg",
+    "https://github.com/N3u7r0/8beats-reactJS",
+    "https://todolist-brian.web.app/",
+    skillHtml,
+    skillCss,
+    skillReact
   ),
 ];
 
@@ -167,10 +178,19 @@ class Skills {
 
 let conjuntoSkills = [
   new Skills("Html-5", skillHtml, ["Etiquetas", "Semántica", "Accesibilidad"]),
-  new Skills("Css", skillCss, ["Flexbox", "Grid", "Animaciones"," responsive"]),
+  new Skills("Css", skillCss, [
+    "Flexbox",
+    "Grid",
+    "Animaciones",
+    " responsive",
+  ]),
   new Skills("JavaScript", skillJavaScript, ["ES6+", "DOM", "Promesas"]),
   new Skills("Sass", skillSass, ["Variables", "Mixins", "Anidamiento"]),
-  new Skills("React js", skillReact, ["Componentes", "Hooks", "Estados, customHooks"]),
+  new Skills("React js", skillReact, [
+    "Componentes",
+    "Hooks",
+    "Estados, customHooks",
+  ]),
   new Skills("Bootstrap", skillBootstrap, [
     "Grid",
     "Utilidades",
