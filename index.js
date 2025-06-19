@@ -46,7 +46,6 @@ class Porfolio {
 
 //creo un array de objetos para recorre los porfolios.
 let proyectos = [
-
   new Porfolio(
     "8-Bits",
     "App destinada a guardar o eliminar Roms y emuladores de consolas retro.estilos css propios ",
@@ -71,6 +70,16 @@ let proyectos = [
     skillFirebase
   ),
   new Porfolio(
+    "ToDo-List",
+    "Un todo list full responsive que guarda las tareas en el storage y contiene una calculadora. ",
+    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/to-DoList.jpg?raw=true",
+    "https://github.com/N3u7r0/8beats-reactJS",
+    "https://todolist-brian.web.app/",
+    skillHtml,
+    skillCss,
+    skillReact
+  ),
+  new Porfolio(
     "checkIn Js",
     "app de javascript vanila para guardar datos en el local storage.",
     "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/checkIn-Js.jpg?raw=true",
@@ -78,17 +87,6 @@ let proyectos = [
     "link 1",
     skillHtml,
     skillBootstrap,
-    skillJavaScript,
-    skillnone
-  ),
-  new Porfolio(
-    "calculadora",
-    "una simple calculadora de javascript",
-    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/calculadora.jpg?raw=true",
-    "https://github.com/N3u7r0/calculadora",
-    "https://n3u7r0.github.io/calculadora/",
-    skillHtml,
-    skillCss,
     skillJavaScript,
     skillnone
   ),
@@ -113,16 +111,6 @@ let proyectos = [
     skillCss,
     skillJavaScript,
     skillnone
-  ),
-    new Porfolio(
-    "ToDo-List",
-    "Un todo list full responsive que guarda las tareas en el storage. ",
-    "https://github.com/N3u7r0/Brian-Sabatini--Repositorio/blob/master/images/to-DoList.jpg?raw=true",
-    "https://github.com/N3u7r0/8beats-reactJS",
-    "https://todolist-brian.web.app/",
-    skillHtml,
-    skillCss,
-    skillReact
   ),
 ];
 
